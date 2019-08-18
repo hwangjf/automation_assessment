@@ -38,8 +38,15 @@ begin
   puts "Found first product that appears in 'Customers who also bought'"
   puts "Product info:\n" + customers_who_also_bought.text
 rescue Selenium::WebDriver::Error::TimeoutError
+  puts "Test Failed"
   puts "Rescued timed out when searching for 'Customers who also bought'"
 end
 
-
+begin
+  more_options = browser.find_element(:css, '#more_options')
+  puts 'more options?' + more_options.text
+rescue
+  puts "Test Failed"
+  puts 'more options was not found or incorrectly searched for'
+end
 browser.quit
