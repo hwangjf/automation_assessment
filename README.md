@@ -1,3 +1,5 @@
 ## Instructions
-run `$ gem install 'selenium-webdriver'`
-run `$ ruby test.rb`
+run ```
+  gem install 'selenium-webdriver'
+  ruby test.rb
+```
