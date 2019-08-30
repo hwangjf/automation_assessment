@@ -7,7 +7,7 @@ describe 'class AmazonSearch' do
   describe "Search for Sharon Jones and find info" do
     
     it "Navigate to Amazon" do
-
+      browser = Selenium::WebDriver.for :chrome
       browser.navigate.to "https://www.amazon.com/"
       element = browser.find_element(:id, 'twotabsearchtextbox')
       element.send_keys "Sharon Jones"
@@ -18,6 +18,8 @@ describe 'class AmazonSearch' do
       }
       puts "Test Passed: found 'I Learned The Hard Way'" 
       target.click
+
+      expect(target.to exist)
     end
 
 
