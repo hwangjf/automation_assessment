@@ -8,6 +8,9 @@ describe 'class AmazonSearch' do
     
     it "Navigate to Amazon" do
       browser = Selenium::WebDriver.for :chrome
+      wait = Selenium::WebDriver::Wait.new(timeout: 30, message: "Could not find the element")
+
+      
       browser.navigate.to "https://www.amazon.com/"
       element = browser.find_element(:id, 'twotabsearchtextbox')
       element.send_keys "Sharon Jones"
