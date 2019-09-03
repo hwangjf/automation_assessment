@@ -1,5 +1,4 @@
 require 'spec_helper'
-require './test.rb'
 require 'selenium-webdriver'
 
 describe 'Amazon_search' do
