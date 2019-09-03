@@ -27,18 +27,13 @@ describe 'Amazon_search' do
     end
 
     it "can find album 'I Learned The Hard Way'" do
-      # page.find('span', "I Learned The Hard Way")
+
       target = wait.until {
-        # browser.find_element(:partial_link_text, 'I Learned The Hard Way')
 
         browser.find_element(:xpath, "//*[@id='search']/div[1]/div[2]/div/span[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")
-        # not the best way to search to choose 
       }
-      # target = browser.find_element(:xpath, "//*[contains(text(), 'I Learned The Hard Way')]")
       
-      # puts target
       target.click
-      # page.should have_content('I Learned The Hard Way')
     end
     
     it "can find Audio CD price" do
