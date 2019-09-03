@@ -55,7 +55,7 @@ describe 'Amazon_search' do
 
     it "can find first product that appears in 'Customers who bought this item also bought'" do
       customers_who_also_bought = wait.until {
-        browser.find_element(:xpath, '//*[@id="anonCarousel1"]/ol/li[1]') 
+        browser.find_element(:css, '#anonCarousel1 > ol > li:nth-child(1)') 
       }
 
       puts "Found first product that appears in 'Customers who also bought'"
