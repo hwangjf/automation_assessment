@@ -1,7 +1,6 @@
 require 'spec_helper'
 require './test.rb'
 require 'selenium-webdriver'
-# require 'capybara'
 
 describe 'Amazon_search' do
 
